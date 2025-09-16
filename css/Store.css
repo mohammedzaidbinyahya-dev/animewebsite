@@ -1,0 +1,90 @@
+ 
+/* Store Section */
+.store-section {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.store-text {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+/* Store Cards */
+.store-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.store-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.store-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.store-card h3 {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.store-card .price {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.store-card .buy-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.store-card .buy-btn:hover {
+  background: #fff;
+  color: var(--accent);
+  transform: scale(1.05);
+}
+.store-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(122, 75, 75, 0.445); /* لون خلفية شبه شفاف */
+  box-shadow: 0 22px 55px rgba(255, 0, 0, 0.4); /* ظل أحمر */
+}
+.store-card:hover img{
+        transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(238, 238, 238, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .store-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .store-cards {
+    grid-template-columns: 1fr;
+  }
+}

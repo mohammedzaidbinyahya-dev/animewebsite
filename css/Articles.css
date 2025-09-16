@@ -1,0 +1,114 @@
+.characters-section {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--accent);
+}
+
+.characters-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Character Card */
+.character-card {
+  width: 250px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+}
+
+.character-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.character-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.character-card p {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, #fdff6ed3, #bebe8f, #a4cef5);
+  box-shadow: 0 20px 40px rgb(255, 0, 0);
+}
+
+.character-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 100px rgb(0, 0, 0);
+}
+
+.main-footer {
+  padding: 30px 50px;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.main-footer p {
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.social-icons a {
+  color: var(--accent);
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--highlight);
+}
+
+
+@media (min-width: 1024px) {
+  .characters-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .character-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .character-card:nth-child(2) { grid-column: 3; grid-row: 1; }
+  .character-card:nth-child(3) { grid-column: 2; grid-row: 2; margin-top: 20px; }
+  .character-card:nth-child(4) { grid-column: 1; grid-row: 3; margin-top: 10px; }
+  .character-card:nth-child(5) { grid-column: 3; grid-row: 3; margin-top: 10px; }
+  .character-card:nth-child(6) { grid-column: 2; grid-row: 4; margin-top: 20px; }
+}
+
+@media (max-width: 768px) {
+  .characters-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .character-card {
+    width: 80%;
+  }
+
+  .character-card:nth-child(odd) { margin-left: auto; }
+  .character-card:nth-child(even) { margin-right: auto; }
+
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
