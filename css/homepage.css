@@ -64,6 +64,10 @@ body{
 }
 .hero-button:hover{transform:scale(1.06)}
 
+.wows{
+  margin: 20px auto;
+  width: 70%;
+}
 
 /* ---------------- Services (Anime Apps) - Staggered layout ---------------- */
 /* حاوية Grid بثلاث أعمدة — نتحكم بمواقع كل بطاقة بواسطة nth-child */
@@ -84,6 +88,7 @@ body{
   margin:0 auto;
   position:relative;
 }
+
 
 /* البطاقة العامة */
 .service-card{

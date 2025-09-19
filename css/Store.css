@@ -4,10 +4,9 @@
   text-align: center;
 }
 
-.section-title {
-  font-size: 36px;
-  color: var(--accent);
-  margin-bottom: 20px;
+.section-title{
+  margin: 30px auto;
+  width: 70%;
 }
 
 .store-text {
